@@ -11,5 +11,10 @@ async def on_ready():
     print('------------')
 
 
-client.run('NTIwMzIwMzQzMDQzMjExMjg1.XK1XzA.95zdEiAjehH8cjMOV0nXz91TR4I')
+@client.command()
+async def hi(ctx):
+    await ctx.send('Hello there')
+
+
+client.run('NjkxNDkyMzcxNTY4Nzg3NTI3.XngwjA.WyABKZoCc8RFmkK7snMPal_0Owg')
 print('Properly exited')
