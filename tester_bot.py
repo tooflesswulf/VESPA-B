@@ -16,5 +16,5 @@ async def hi(ctx):
     await ctx.send('Hello there')
 
 
-client.run('NjkxNDkyMzcxNTY4Nzg3NTI3.XngwjA.WyABKZoCc8RFmkK7snMPal_0Owg')
+client.run('NjkxNDkyMzcxNTY4Nzg3NTI3.Xngxlw.qXvT0UQIqc9ETFvIkrb8rDmrgro')
 print('Properly exited')
