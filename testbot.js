@@ -7,8 +7,8 @@ client.on('ready', ()=>{
 
 client.on('message', msg => {
     if (msg.content === ';hi') {
-        msg.reply('Helo thar');
+        msg.channel.send('Helo thar');
     }
 });
 
-client.login('NjkxNDkyMzcxNTY4Nzg3NTI3.Xng5Fw.ia5HNHBvbgy4rCA3W0jieMsb0QQ')
+client.login('NjkxNDkyMzcxNTY4Nzg3NTI3.XnhA3w._BUwq75EKsh-lHzDgxLXGBM7ol4')
