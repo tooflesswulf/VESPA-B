@@ -28,15 +28,18 @@ function addJustJoinedRole(guild) {
 }
 
 function addStudioChannels(guild){
-    guild.channels.create('studio',{
-        type: 'category',
-    })
-    guild.channels.create('studio',{
+    var studioCat = guild.channels.create('studio',{
+            type: 'category',
+    });
+    console.log(studioCat.id);
+    var studioText = guild.channels.create('studio',{
             type: 'text',
-        })
-    guild.channels.create('studio',{
-        type: 'voice',
-    })
+            parent: studioCat,
+        });
+    var studioVoice = guild.channels.create('studio',{
+            type: 'voice',
+            parent: studioCat,
+    });
 }
 
 client.on('guildMemberAdd', member => {
