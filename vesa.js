@@ -45,4 +45,7 @@ client.on('guildMemberAdd', member => {
 });
 
 
-client.login('NjkxNTE5Njc3MzMxMTQ0Nzk0.XnjTOQ.fw28vufF4EB9SqdOknrdCtbOCT4');
+const fs = require('fs');
+var clientid = fs.readFileSync('clientid.txt', 'utf8');
+console.log(`Using client id:\t${clientid}`)
+client.login(clientid);
