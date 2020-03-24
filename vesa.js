@@ -11,8 +11,8 @@ client.on('message', msg => {
     }
 
     if (msg.content === '!setup server') {
-        msg.channel.send('Setting up the server');
-        addJustJoinedRole(msg.channel.guild)
+        // msg.channel.send('Setting up the server');
+        // addJustJoinedRole(msg.channel.guild)
         addStudioChannels(msg.channel.guild)
     }
 });
@@ -27,19 +27,29 @@ function addJustJoinedRole(guild) {
       })
 }
 
-function addStudioChannels(guild){
-    var studioCat = guild.channels.create('studio',{
+async function addStudioChannels(guild){
+    console.log(`enteringg`)
+    var studioCat = await guild.channels.create('studio',{
             type: 'category',
     });
     console.log(studioCat.id);
-    var studioText = guild.channels.create('studio',{
-            type: 'text',
-            parent: studioCat,
-        });
-    var studioVoice = guild.channels.create('studio',{
-            type: 'voice',
-            parent: studioCat,
+
+    var studioCat2 = guild.channels.create('studio2',{
+        type: 'category',
     });
+    studioCat2.then(ch => {
+        console.log(ch.id);
+    });
+
+
+    // var studioText = guild.channels.create('studio',{
+    //         type: 'text',
+    //         parent: studioCat,
+    //     });
+    // var studioVoice = guild.channels.create('studio',{
+    //         type: 'voice',
+    //         parent: studioCat,
+    // });
 }
 
 client.on('guildMemberAdd', member => {
