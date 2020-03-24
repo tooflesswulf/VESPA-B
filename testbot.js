@@ -11,4 +11,11 @@ client.on('message', msg => {
     }
 });
 
-client.login('NjkxNDkyMzcxNTY4Nzg3NTI3.XnhA3w._BUwq75EKsh-lHzDgxLXGBM7ol4')
+
+client.on('guildMemberAdd', member => {
+    member.guild.systemChannel.send("welcome to the server");
+
+});
+
+
+client.login('NjkxNDkyMzcxNTY4Nzg3NTI3.XnhCUg.3VnyQXKo-qQ9SKUy4DWKjAGVrew');
